@@ -1,113 +1,177 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>🌎SISGER</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SISGER - Energías Renovables</title>
+  <!-- Materialize CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet" />
+  <!-- Google Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
 
-    <!-- Materialize CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <!-- Iconos y fuentes -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-    />
-    <!-- Tu CSS -->
-    <link rel="stylesheet" href="../css/styles.css" />
-  </head>
-  <!-- Paleta de colores guia Amarillo del sol: #F4B400// Verde claro de la hoja y contorno: #4CAF50 // Verde oscuro del texto y turbina: #1B5E20 Azul-verde oscuro de los paneles solares: #2E7D32 // Fondo crema claro: #FAF9F6 (o similar a un blanco cálido)-->
-  <body>
-    <!-- 🔵 BARRA DE NAVEGACIÓN -->
-    <header>
-      <nav class="green lighten-1">
-        <div class="nav-wrapper">
-          <!-- ✅ Título centrado -->
-          <div class="brand-logo">SISGER - TALENTO TECH - U. CALDAS</div>
-
-          <!-- ✅ Menú alineado a la derecha -->
-          <ul id="nav-mobile" class="right hide-on-med-and-down right-menu">
-            <li><a href="sass.html">Inicio</a></li>
-            <li><a href="badges.html">Documentación</a></li>
-            <li><a href="collapsible.html">🌎SISGER</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-
-    <!-- 🔵 LOGO DEBAJO DE LA NAV -->
-
-    <!-- 🔵 CONTENIDO -->
-    <main>
-      <article>
-        <div class="container">
-          <div class="row">
-            <div class="col s12 m3">
-              <img
-                src="../images/Logo-SISGER.png"
-                alt="Logo del sistema SISGER"
-                class="responsive-img"
-              />
-            </div>
-
-            <div class="col s12 m6 center-align">
-              <h1 class="header">
-                Sistema de Gestión de Información para Energías Renovables
-              </h1>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <article>
-        <div class="container">
-          <div class="row">
-            <div class="col s12 m6">
-              <h2>¿Qué es SISGER?</h2>
-              <p>
-                SISGER es un sistema diseñado para gestionar la información
-                relacionada con las energías renovables, facilitando el acceso y
-                la organización de datos relevantes.
-              </p>
-            </div>
-            <div class="col s12 m6">
-              <h2>Características</h2>
-              <ul>
-                <li>Interfaz amigable y fácil de usar.</li>
-                <li>Acceso a documentación técnica.</li>
-                <li>Integración con bases de datos de energías renovables.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </article>
-    </main>
-
-    <!-- 🔵 PIE DE PÁGINA -->
-    <footer>
+  <!-- Navbar -->
+  <div id="navbar" class="navbar-fixed">
+    <nav class="transparent nav-wrapper">
       <div class="container">
-          <div class="row">
-            <div class="col s12 center-align">
-              <p>
-                © 2025 SISGER. Todos los derechos reservados. Desarrollado por equipo SISGER
-              </p>
+        <a href="#" class="brand-logo white-text">SISGER</a>
+        <a href="#" data-target="mobile-menu" class="sidenav-trigger white-text"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#" class="white-text">Inicio</a></li>
+          <li><a href="#servicios" class="white-text">Servicios</a></li>
+          <li><a href="#proyectos" class="white-text">Proyectos</a></li>
+          <li><a href="#contacto" class="white-text">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Sidenav Mobile -->
+  <ul class="sidenav" id="mobile-menu">
+    <li><a href="#">Inicio</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#proyectos">Proyectos</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <video autoplay muted loop id="bgvideo">
+      <source src="/Videos/20250729_2354_Animating Renewable Energy_storyboard_01k1ctwnptfq4tsg3djhqqg63d.mp4" type="video/mp4" />
+    </video>
+    <div class="overlay"></div>
+    <div class="hero-content center-align">
+      <h1 class="white-text">Sistema de Gestión de Información para Energías Renovables</h1>
+      <div class="buttons">
+        <a href="#servicios" class="btn btn-large white black-text">Nuestros Servicios</a>
+        <a href="#contacto" class="btn btn-large yellow darken-2 black-text">Contáctanos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Servicios -->
+  <section id="servicios" class="section scrollspy">
+    <div class="container">
+      <h2 class="center">Servicios</h2>
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="card hoverable">
+            <div class="card-image">
+              <img src="images/solar.jpg" alt="Energía Solar" />
+            </div>
+            <div class="card-content">
+              <span class="card-title">Solar</span>
+              <p>Instalaciones de paneles solares para vivienda e industria.</p>
             </div>
           </div>
         </div>
-    </footer>
+        <div class="col s12 m4">
+          <div class="card hoverable">
+            <div class="card-image">
+              <img src="images/eolica.jpg" alt="Energía Eólica" />
+            </div>
+            <div class="card-content">
+              <span class="card-title">Eólica</span>
+              <p>Soluciones de aerogeneradores adaptadas a tu proyecto.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card hoverable">
+            <div class="card-image">
+              <img src="images/hidrica.jpg" alt="Energía Hidráulica" />
+            </div>
+            <div class="card-content">
+              <span class="card-title">Hidráulica</span>
+              <p>Diseño y mantenimiento de centrales hidroeléctricas.</p>
+            </div>
+          </div>
+        </div>
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        M.AutoInit();
-      });
-    </script>
-  </body>
+
+        <div class="col s12 m4">
+          <div class="card hoverable">
+            <div class="card-image">
+              <img src="images/hidrica.jpg" alt="Energía Hidráulica" />
+            </div>
+            <div class="card-content">
+              <span class="card-title">Hidráulica</span>
+              <p>Diseño y mantenimiento de centrales hidroeléctricas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card hoverable">
+            <div class="card-image">
+              <img src="images/hidrica.jpg" alt="Energía Hidráulica" />
+            </div>
+            <div class="card-content">
+              <span class="card-title">Hidráulica</span>
+              <p>Diseño y mantenimiento de centrales hidroeléctricas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card hoverable">
+            <div class="card-image">
+              <img src="images/hidrica.jpg" alt="Energía Hidráulica" />
+            </div>
+            <div class="card-content">
+              <span class="card-title">Hidráulica</span>
+              <p>Diseño y mantenimiento de centrales hidroeléctricas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card hoverable">
+            <div class="card-image">
+              <img src="images/hidrica.jpg" alt="Energía Hidráulica" />
+            </div>
+            <div class="card-content">
+              <span class="card-title">Hidráulica</span>
+              <p>Diseño y mantenimiento de centrales hidroeléctricas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card hoverable">
+            <div class="card-image">
+              <img src="images/hidrica.jpg" alt="Energía Hidráulica" />
+            </div>
+            <div class="card-content">
+              <span class="card-title">Hidráulica</span>
+              <p>Diseño y mantenimiento de centrales hidroeléctricas.</p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Pie de página -->
+  <footer id="contacto" class="page-footer grey darken-3">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h5 class="white-text">Contáctanos</h5>
+          <p class="grey-text text-lighten-4">info@renovables.com | +57 300 0000000</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright grey darken-4">
+      <div class="container center-align">
+        © 2025 Renovables S.A.S.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Materialize JS y script personalizado -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
 </html>
