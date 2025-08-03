@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>SISGER - Energías Renovables</title>
-      <!-- Materialize CSS -->
-      <link
-        href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-        rel="stylesheet"
-      />
-      <!-- Google Icons -->
-      <link
-        href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        rel="stylesheet"
-      />
-      <!-- Estilos personalizados -->
-      <link rel="stylesheet" href="/css/styles.css" />
-    </head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SISGER - Energías Renovables</title>
+    <!-- Materialize CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
     <!-- Navbar -->
@@ -68,13 +66,20 @@
         <input class="white-text" type="text" id="lat" placeholder="Latitud" />
         <input class="white-text" type="text" id="lon" placeholder="Longitud" />
         <input
-        class="white-text"
+          class="white-text"
           type="number"
           id="potencia"
           placeholder="Potencia del panel (W)"
         />
-        <button class="btn btn-large yellow darken-2 black-text" style="border-radius: 8px;" onclick="calcularEnergia()">Calcular</button>
+        <button
+          class="btn btn-large yellow darken-2 black-text"
+          style="border-radius: 8px"
+          onclick="calcularEnergia()"
+        >
+          Calcular
+        </button>
         <p id="resultado"></p>
+        <canvas id="graficoRadiacion" width="400" height="200"></canvas>
       </div>
     </section>
 
@@ -97,6 +102,7 @@
 
     <!-- Materialize JS y script personalizado -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="/Javascript/script.js"></script>
   </body>
 </html>
