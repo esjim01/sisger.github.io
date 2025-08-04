@@ -26,14 +26,14 @@ async function calcularEnergia() {
   const potencia = parseFloat(document.getElementById("potencia").value); // en W
   const resultadoEl = document.getElementById("resultado");
 
-  resultadoEl.innerHTML = "Consultando datos de la NASA...";
+  resultadoEl.innerHTML = "Consultando datos de la NASA......";
 
   if (isNaN(lat) || isNaN(lon) || isNaN(potencia)) {
     resultadoEl.innerHTML = "Por favor ingresa valores válidos para todos los campos.";
     return;
   }
 
-  // ✅ Usamos un endpoint confiable (NASA POWER - climatología)
+ //Usamos un endpoint confiable (NASA POWER - climatología)
   const url = `https://power.larc.nasa.gov/api/temporal/climatology/point?parameters=ALLSKY_SFC_SW_DWN&community=RE&longitude=${lon}&latitude=${lat}&format=JSON`;
 
   try {
@@ -44,7 +44,7 @@ async function calcularEnergia() {
     const radiacionMensual = data.properties.parameter.ALLSKY_SFC_SW_DWN;
 
     if (!radiacionMensual) {
-      resultadoEl.innerHTML = "No se encontraron datos de radiación para esta ubicación.";
+      resultadoEl.innerHTML = "class=white-text No se encontraron datos de radiación para esta ubicación.";
       return;
     }
 
@@ -66,16 +66,16 @@ async function calcularEnergia() {
     }
 
     resultadoEl.innerHTML = `
-      <strong>Radiación solar mensual promedio (NASA POWER - histórico):</strong><br>
-      <strong>Ubicación:</strong> Lat: ${lat}, Lon: ${lon}<br>
-      <strong>Potencia del panel:</strong> ${potencia} W<br><br>
-      <strong>Energía estimada generada en un año:</strong> ${energiaTotalKWh.toFixed(2)} kWh
+      <strong class="white-text">Radiación solar mensual promedio (NASA POWER - histórico):</strong><br>
+      <strong class="white-text">Ubicación:</strong> Lat: ${lat}, Lon: ${lon}<br>
+      <strong class="white-text">Potencia del panel:</strong> ${potencia} W<br><br>
+      <strong class="white-text">Energía estimada generada en un año:</strong> ${energiaTotalKWh.toFixed(2)} kWh
     `;
 
     dibujarGraficoRadiacion(labels, valoresRadiacion);
 
   } catch (error) {
-    console.error("Error capturado en catch:", error);
+    console.error(" class= white-text Error capturado en catch:", error);
     resultadoEl.innerHTML = "Error al consultar los datos climáticos. Intenta nuevamente.";
   }
 }

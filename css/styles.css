@@ -76,3 +76,20 @@ nav.scrolled a:hover {
 .buttons .btn {
   margin: 0 0.5rem;
 }
+
+.container-data {
+
+  justify-content: center;
+  margin-top: 1rem;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.grafico-container {
+  width: 600px !important; /* Ajusta el ancho deseado */
+  max-width: 100% !important; /* Para que no desborde en pantallas pequeñas */
+  height: 300px; /* Ajusta la altura deseada */
+  margin: 0 auto; /* Centrar el gráfico */
+}

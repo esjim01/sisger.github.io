@@ -60,26 +60,43 @@
           type="video/mp4"
         />
       </video>
+
       <div class="overlay"></div>
       <div class="hero-content center-align">
         <h1 class="white-text">Energía Solar Generada Hoy</h1>
-        <input class="white-text" type="text" id="lat" placeholder="Latitud" />
-        <input class="white-text" type="text" id="lon" placeholder="Longitud" />
-        <input
-          class="white-text"
-          type="number"
-          id="potencia"
-          placeholder="Potencia del panel (W)"
-        />
-        <button
-          class="btn btn-large yellow darken-2 black-text"
-          style="border-radius: 8px"
-          onclick="calcularEnergia()"
-        >
-          Calcular
-        </button>
-        <p id="resultado"></p>
-        <canvas id="graficoRadiacion" width="400" height="200"></canvas>
+        <div class="card container-data">
+          <input
+            class="white-text"
+            type="text"
+            id="lat"
+            placeholder="Latitud"
+          />
+          <input
+            class="white-text"
+            type="text"
+            id="lon"
+            placeholder="Longitud"
+          />
+          <input
+            class="white-text"
+            type="number"
+            id="potencia"
+            placeholder="Potencia del panel (W)"
+          />
+        </div>
+        <div class="button-calc">
+          <button
+            class="btn btn-large yellow darken-2 black-text"
+            style="border-radius: 8px"
+            onclick="calcularEnergia()"
+          >
+            Calcular
+          </button>
+        </div>
+        <div class="grafico-container">
+          <p class="white-text" id="resultado"></p>
+          <canvas id="graficoRadiacion" width="400" height="200"></canvas>
+        </div>
       </div>
     </section>
 
